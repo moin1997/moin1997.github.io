@@ -1,23 +1,63 @@
+/* Button style */
 .btn {
-  box-shadow: 0 .1875rem .1875rem 0 rgba(0,0,0,.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
+  font-size: 22px;
+  font-family: $secondary-font;
+  text-transform: capitalize;
+  padding: 16px 44px;
+  border-radius: 5px;
+  font-weight: 600;
   border: 0;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &-sm {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+
+  &-xs {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
 }
 
 .btn-primary {
-  background-color: $primary;
-  &:hover {
-    background-color: darken($primary, 10%);
-  }
-  &:focus {
-    background-color: darken($primary, 10%);
-    color: white;
-  }
+  background: $primary-color;
+  color: $white;
+
   &:active {
-    background-color: darken($primary, 15%) !important;
+    background: lighten($color: $primary-color, $amount: 10) !important;
+  }
+
+  &:hover {
+    background: lighten($color: $primary-color, $amount: 10);
+  }
+
+  &.focus,
+  &.active {
+    background: lighten($color: $primary-color, $amount: 10) !important;
+    box-shadow: none !important;
+  }
+}
+
+
+.btn-transparent {
+  background: transparent;
+  color: $primary-color;
+  font-weight: bold;
+
+  &:active,
+  &:hover {
+    color: $primary-color;
   }
 }
