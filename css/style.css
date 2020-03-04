@@ -8,6 +8,9 @@ VERSION:	Versoin Number
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
 /*  typography */
+:root{
+  --dark_bg: #333;
+}
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700");
 @font-face {
   font-family: 'BwNistaInt-xBd';
@@ -421,13 +424,14 @@ textarea.form-control {
 
 /* /card */
 .navigation {
-  padding: 40px 130px;
+  padding: 10px 130px;
   transition: .3s ease;
 }
 
 .navigation.nav-bg {
-  background-color: #41228e;
-  padding: 15px 100px;
+  /* background-color: #41228e; */
+  background-color: var(--dark_bg);
+  padding: 10px 100px;
 }
 
 @media (max-width: 991px) {
@@ -438,15 +442,17 @@ textarea.form-control {
 
 @media (max-width: 991px) {
   .navigation {
-    padding: 20px;
-    background: #41228e;
+    padding: 10px;
+    /* background: #41228e; */
+    background-color: var(--dark_bg);
+
   }
 }
 
 .navbar .nav-item .nav-link {
   font-family: "BwNistaInt-xBd";
   text-transform: uppercase;
-  padding: 15px;
+  padding: 10px;
 }
 
 .navbar .nav-item.active {
