@@ -254,7 +254,8 @@ a:hover {
 }
 
 .bg-primary {
-  background: #41228e !important;
+  /* background: #41228e !important; */
+  background: #333 !important;
 }
 
 .bg-gray {
